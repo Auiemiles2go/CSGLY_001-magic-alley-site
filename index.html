@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>魔法黑巷奇货店</title>
+    <meta name="theme-color" content="#111825" />
+    <meta
+      name="description"
+      content="黑巷奇货店正式试玩站。首次进入会自动缓存游戏资源，随后可更快打开。"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0c111a;
+        --panel: rgba(18, 26, 38, 0.92);
+        --panel-2: rgba(28, 39, 56, 0.96);
+        --line: #79ddd3;
+        --line-2: rgba(226, 189, 106, 0.82);
+        --text: #f0eadc;
+        --muted: #aab8c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Microsoft YaHei", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(57, 93, 123, 0.32), transparent 34%),
+          linear-gradient(180deg, #121926 0%, #090d14 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .shell {
+        width: min(100%, 560px);
+        padding: 28px;
+        border-radius: 28px;
+        background: var(--panel);
+        border: 3px solid var(--line);
+        box-shadow: 0 0 0 2px rgba(226, 189, 106, 0.7) inset, 0 18px 50px rgba(0, 0, 0, 0.35);
+      }
+      .title {
+        margin: 0 0 8px;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+      .sub {
+        margin: 0 0 22px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .bar-shell {
+        height: 24px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: var(--panel-2);
+        border: 2px solid var(--line);
+        box-shadow: 0 0 0 2px rgba(226, 189, 106, 0.45) inset;
+      }
+      .bar {
+        width: 0%;
+        height: 100%;
+        background:
+          repeating-linear-gradient(-45deg, rgba(255, 235, 180, 0.28) 0 14px, rgba(255, 235, 180, 0.08) 14px 28px),
+          linear-gradient(180deg, #ffc85c 0%, #ea8f2c 100%);
+        border-radius: inherit;
+        transition: width 0.18s ease;
+      }
+      .status {
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+      .hint {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .actions {
+        margin-top: 18px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 132px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        border: 2px solid var(--line);
+        color: var(--text);
+        background: rgba(35, 58, 82, 0.92);
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .btn.secondary {
+        border-color: rgba(226, 189, 106, 0.75);
+        background: rgba(73, 55, 32, 0.65);
+      }
+      .hidden { display: none; }
+      .error {
+        margin-top: 16px;
+        padding: 14px 16px;
+        border-radius: 18px;
+        background: rgba(92, 24, 24, 0.8);
+        border: 2px solid rgba(255, 120, 120, 0.7);
+        color: #ffe8e8;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <h1 class="title">魔法黑巷奇货店</h1>
+      <p class="sub">
+        首次进入会自动准备资源包。完成后会直接进入游戏，后续打开会更快。
+      </p>
+      <div class="bar-shell"><div id="bar" class="bar"></div></div>
+      <div id="status" class="status">正在检查资源版本…</div>
+      <div id="hint" class="hint">如果网络较慢，首次准备可能需要一点时间。</div>
+      <div id="error" class="error hidden"></div>
+      <div id="actions" class="actions hidden">
+        <a class="btn" href="./game/index.html">直接进入</a>
+        <a class="btn secondary" href="" id="retry-link">重新准备</a>
+      </div>
+    </main>
+    <script src="./jszip.min.js"></script>
+    <script src="./boot.js"></script>
+  </body>
+</html>
