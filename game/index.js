@@ -1,0 +1,11 @@
+window.screenOrientation = "portrait", 
+loadLib("libs/laya.core.min.js"), 
+loadLib("libs/laya.ui.min.js"), 
+loadLib("libs/laya.d3.min.js"), 
+loadLib("libs/laya.physics3D.min.js"), 
+//loadLib("external/md5/md5.js"), 
+loadLib("libs/bignumber.js"), 
+loadLib("libs/NevMesh.js"),
+loadLib("libs/pako.js"),
+loadLib("libs/XYXSDKBundle.js"),
+loadLib("js/bundle.js");

@@ -1,0 +1,255 @@
+{
+    "type": "Box",
+    "props": {
+        "y": 667,
+        "x": 375,
+        "width": 750,
+        "presetID": 1,
+        "name": "pageSetting",
+        "isPresetRoot": true,
+        "height": 1680,
+        "centerY": 0,
+        "centerX": 0,
+        "anchorY": 0.5,
+        "anchorX": 0.5
+    },
+    "compId": 41,
+    "child": [{
+        "type": "Script",
+        "props": {
+            "presetID": 2,
+            "runtime": "add/UIFrame/Page/PageSetting.ts"
+        },
+        "compId": 42
+    }, {
+        "type": "Box",
+        "props": {
+            "y": 667,
+            "x": 375,
+            "top": 0,
+            "right": 0,
+            "presetID": 9,
+            "name": "m_bg",
+            "left": 0,
+            "bottom": 0,
+            "bgColor": "#141414",
+            "anchorY": 0.5,
+            "anchorX": 0.5,
+            "alpha": 0.8
+        },
+        "compId": 49
+    }, {
+        "type": "Image",
+        "props": {
+            "width": 641,
+            "skin": "page/pageSetting/bg.png",
+            "sizeGrid": "182,120,101,153",
+            "presetID": 4,
+            "name": "m_tween_bg",
+            "height": 603,
+            "centerY": -32,
+            "centerX": 0,
+            "anchorY": 0.5,
+            "anchorX": 0.5
+        },
+        "compId": 44,
+        "child": [{
+            "type": "Image",
+            "props": {
+                "top": -26,
+                "skin": "page/pageSetting/close_btn.png",
+                "right": -31,
+                "presetID": 5,
+                "name": "m_close",
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 45
+        }, {
+            "type": "Image",
+            "props": {
+                "skin": "page/pageSetting/sound.png",
+                "presetID": 6,
+                "name": "sound",
+                "centerY": -60,
+                "centerX": -179,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 46,
+            "child": [{
+                "type": "Image",
+                "props": {
+                    "skin": "page/pageSetting/opne.png",
+                    "presetID": 7,
+                    "name": "m_music_open",
+                    "centerY": 0,
+                    "centerX": 306,
+                    "anchorY": 0.5,
+                    "anchorX": 0.5
+                },
+                "compId": 47
+            }, {
+                "type": "Image",
+                "props": {
+                    "y": 65,
+                    "x": 685,
+                    "skin": "page/pageSetting/close.png",
+                    "presetID": 8,
+                    "name": "m_music_close",
+                    "centerY": 0,
+                    "centerX": 306,
+                    "anchorY": 0.5,
+                    "anchorX": 0.5
+                },
+                "compId": 48
+            }]
+        }, {
+            "type": "Image",
+            "props": {
+                "skin": "",
+                "presetID": 10,
+                "name": "mute",
+                "centerY": 124,
+                "centerX": -179,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 50,
+            "child": [{
+                "type": "Image",
+                "props": {
+                    "skin": "",
+                    "presetID": 11,
+                    "name": "m_mute_open",
+                    "centerY": 0,
+                    "centerX": 306,
+                    "anchorY": 0.5,
+                    "anchorX": 0.5
+                },
+                "compId": 51
+            }, {
+                "type": "Image",
+                "props": {
+                    "y": 65,
+                    "x": 685,
+                    "skin": "",
+                    "presetID": 12,
+                    "name": "m_mute_close",
+                    "centerY": 0,
+                    "centerX": 306,
+                    "anchorY": 0.5,
+                    "anchorX": 0.5
+                },
+                "compId": 52
+            }]
+        }, {
+            "type": "Image",
+            "props": {
+                "skin": "page/pageSetting/title.png",
+                "presetID": 13,
+                "name": "m_title",
+                "centerY": -253,
+                "centerX": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 53
+        }]
+    }, {
+        "type": "Box",
+        "props": {
+            "y": 0,
+            "x": 0,
+            "right": 0,
+            "name": "m_native_bottom",
+            "left": 0,
+            "height": 120,
+            "bottom": 0,
+            "anchorY": 0.5,
+            "anchorX": 0.5
+        },
+        "compId": 54,
+        "child": [{
+            "type": "Image",
+            "props": {
+                "y": 150,
+                "x": 375,
+                "top": 0,
+                "right": 0,
+                "name": "icon",
+                "left": 0,
+                "bottom": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 55
+        }, {
+            "type": "Image",
+            "props": {
+                "y": 15,
+                "x": 41,
+                "top": 0,
+                "skin": "page/ad/adLogo.png",
+                "left": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 56,
+            "child": [{
+                "type": "Script",
+                "props": {
+                    "vivoPlat": true,
+                    "presetID": 14,
+                    "oppoPlat": true,
+                    "runtime": "add/UIFrame/PlatHint.ts"
+                },
+                "compId": 59
+            }]
+        }, {
+            "type": "Image",
+            "props": {
+                "y": 30,
+                "x": 720,
+                "top": 0,
+                "skin": "page/ad/close.png",
+                "right": 0,
+                "name": "close",
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 57
+        }, {
+            "type": "Script",
+            "props": {
+                "runtime": "add/UIFrame/NativeInsert.ts"
+            },
+            "compId": 58
+        }, {
+            "type": "Image",
+            "props": {
+                "y": 100,
+                "x": 63,
+                "skin": "page/ad/adxm_logo.png",
+                "presetID": 15,
+                "left": 0,
+                "bottom": 0,
+                "anchorY": 0.5,
+                "anchorX": 0.5
+            },
+            "compId": 60,
+            "child": [{
+                "type": "Script",
+                "props": {
+                    "winPlat": false,
+                    "presetID": 16,
+                    "isXM": true,
+                    "runtime": "add/UIFrame/PlatHint.ts"
+                },
+                "compId": 61
+            }]
+        }]
+    }],
+    "loadList": ["page/pageSetting/bg.png", "page/pageSetting/close_btn.png", "page/pageSetting/sound.png", "page/pageSetting/opne.png", "page/pageSetting/close.png", "page/pageSetting/mute.png", "page/pageSetting/title.png", "page/ad/adLogo.png", "page/ad/close.png", "page/ad/adxm_logo.png"],
+    "loadList3D": []
+}
