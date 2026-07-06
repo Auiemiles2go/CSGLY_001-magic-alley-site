@@ -1,39 +1,39 @@
 {
-	"version":"LAYAMATERIAL:02",
-	"props":{
-		"type":"Laya.PBRStandardMaterial",
-		"name":"lan",
-		"textures":[
+	"version": "LAYAMATERIAL:02",
+	"props": {
+		"type": "Laya.PBRStandardMaterial",
+		"name": "lan",
+		"textures": [
 			{
-				"name":"albedoTexture",
-				"path":"../../Texture/Square.png",
-				"constructParams":[
+				"name": "albedoTexture",
+				"path": "../../Texture/Square.png",
+				"constructParams": [
 					64,
 					64,
 					0,
 					false
 				],
-				"propertyParams":{
-					"filterMode":1,
-					"wrapModeU":0,
-					"wrapModeV":0,
-					"anisoLevel":1
+				"propertyParams": {
+					"filterMode": 1,
+					"wrapModeU": 0,
+					"wrapModeV": 0,
+					"anisoLevel": 1
 				}
 			}
 		],
-		"vectors":[
+		"vectors": [
 			{
-				"name":"albedoColor",
-				"value":[
-					0.1574403,
-					0.3540295,
-					0.5471698,
+				"name": "albedoColor",
+				"value": [
+					0.08,
+					0.2,
+					0.34,
 					1
 				]
 			},
 			{
-				"name":"emissionColor",
-				"value":[
+				"name": "emissionColor",
+				"value": [
 					0,
 					0,
 					0,
@@ -41,8 +41,8 @@
 				]
 			},
 			{
-				"name":"tilingOffset",
-				"value":[
+				"name": "tilingOffset",
+				"value": [
 					1,
 					1,
 					0,
@@ -50,20 +50,20 @@
 				]
 			}
 		],
-		"defines":[],
-		"cull":2,
-		"blendSrc":1,
-		"blendDst":0,
-		"blend":0,
-		"depthWrite":true,
-		"depthTest":515,
-		"renderQueue":2000,
-		"_Cutoff":0.5,
-		"smoothness":0.1,
-		"smoothnessTextureScale":1,
-		"metallic":0,
-		"normalTextureScale":1,
-		"parallaxTextureScale":0.02,
-		"occlusionTextureStrength":1
+		"defines": [],
+		"cull": 2,
+		"blendSrc": 1,
+		"blendDst": 0,
+		"blend": 0,
+		"depthWrite": true,
+		"depthTest": 515,
+		"renderQueue": 2000,
+		"_Cutoff": 0.5,
+		"smoothness": 0.1,
+		"smoothnessTextureScale": 1,
+		"metallic": 0,
+		"normalTextureScale": 1,
+		"parallaxTextureScale": 0.02,
+		"occlusionTextureStrength": 1
 	}
 }

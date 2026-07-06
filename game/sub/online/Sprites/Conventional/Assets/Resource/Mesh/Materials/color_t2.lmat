@@ -1,45 +1,45 @@
 {
-	"version":"LAYAMATERIAL:02",
-	"props":{
-		"type":"Laya.UnlitMaterial",
-		"name":"color_t2",
-		"renderStates":[
+	"version": "LAYAMATERIAL:02",
+	"props": {
+		"type": "Laya.UnlitMaterial",
+		"name": "color_t2",
+		"renderStates": [
 			{
-				"cull":2,
-				"blend":1,
-				"srcBlend":770,
-				"dstBlend":771,
-				"depthWrite":false,
-				"depthTest":515
+				"cull": 2,
+				"blend": 1,
+				"srcBlend": 770,
+				"dstBlend": 771,
+				"depthWrite": false,
+				"depthTest": 515
 			}
 		],
-		"enableVertexColor":false,
-		"alphaTest":false,
-		"alphaTestValue":0.5,
-		"renderQueue":3000,
-		"albedoIntensity":1,
-		"textures":[
+		"enableVertexColor": false,
+		"alphaTest": false,
+		"alphaTestValue": 0.5,
+		"renderQueue": 3000,
+		"albedoIntensity": 1,
+		"textures": [
 			{
-				"name":"albedoTexture",
-				"path":"../color_gradient.png",
-				"constructParams":[
+				"name": "albedoTexture",
+				"path": "../color_gradient.png",
+				"constructParams": [
 					512,
 					512,
 					1,
 					true
 				],
-				"propertyParams":{
-					"filterMode":1,
-					"wrapModeU":0,
-					"wrapModeV":0,
-					"anisoLevel":1
+				"propertyParams": {
+					"filterMode": 1,
+					"wrapModeU": 0,
+					"wrapModeV": 0,
+					"anisoLevel": 1
 				}
 			}
 		],
-		"vectors":[
+		"vectors": [
 			{
-				"name":"tilingOffset",
-				"value":[
+				"name": "tilingOffset",
+				"value": [
 					1,
 					1,
 					0,
@@ -47,15 +47,15 @@
 				]
 			},
 			{
-				"name":"albedoColor",
-				"value":[
-					1,
-					1,
-					1,
-					0.7058824
+				"name": "albedoColor",
+				"value": [
+					0.18,
+					0.1,
+					0.3,
+					0.88
 				]
 			}
 		],
-		"defines":[]
+		"defines": []
 	}
 }
