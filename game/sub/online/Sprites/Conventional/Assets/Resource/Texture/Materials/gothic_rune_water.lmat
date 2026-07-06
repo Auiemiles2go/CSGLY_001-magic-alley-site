@@ -1,0 +1,71 @@
+{
+  "version": "LAYAMATERIAL:02",
+  "props": {
+    "type": "Laya.PBRStandardMaterial",
+    "name": "gothic_rune_water",
+    "textures": [
+      {
+        "name": "albedoTexture",
+        "path": "../../Mesh/color_gradient.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      }
+    ],
+    "vectors": [
+      {
+        "name": "albedoColor",
+        "value": [
+          0.06,
+          0.18,
+          0.2,
+          0.64
+        ]
+      },
+      {
+        "name": "emissionColor",
+        "value": [
+          0.02,
+          0.28,
+          0.32,
+          1
+        ]
+      },
+      {
+        "name": "tilingOffset",
+        "value": [
+          1,
+          1,
+          0,
+          0
+        ]
+      }
+    ],
+    "defines": [
+      "TRANSPARENTBLEND"
+    ],
+    "cull": 2,
+    "blendSrc": 1,
+    "blendDst": 771,
+    "blend": 1,
+    "depthWrite": false,
+    "depthTest": 515,
+    "renderQueue": 3000,
+    "_Cutoff": 0.5,
+    "smoothness": 0.8,
+    "smoothnessTextureScale": 1,
+    "metallic": 0,
+    "normalTextureScale": 1,
+    "parallaxTextureScale": 0.02,
+    "occlusionTextureStrength": 1
+  }
+}
