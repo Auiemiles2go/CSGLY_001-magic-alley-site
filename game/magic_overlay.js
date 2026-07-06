@@ -15,13 +15,24 @@
         "width:100vw",
         "height:100vh",
         "pointer-events:none",
-        "z-index:2147483000",
-        "mix-blend-mode:screen"
+        "z-index:2147483000"
     ].join(";");
 
     function attach() {
         if (!canvas.parentNode && document.body) {
             document.body.appendChild(canvas);
+        }
+    }
+
+    function gradeGameCanvas() {
+        var list = document.querySelectorAll("canvas");
+        for (var i = 0; i < list.length; i++) {
+            var target = list[i];
+            if (target === canvas || target.id === "magic-alley-overlay") {
+                continue;
+            }
+            target.style.filter = "hue-rotate(205deg) saturate(0.58) brightness(0.68) contrast(1.24)";
+            target.style.backgroundColor = "#090b14";
         }
     }
 
@@ -72,6 +83,7 @@
 
     function draw(now) {
         attach();
+        gradeGameCanvas();
         sizeCanvas();
 
         var ctx = canvas.getContext("2d");
@@ -80,11 +92,22 @@
         var dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
         ctx.clearRect(0, 0, w, h);
 
-        var g = ctx.createRadialGradient(w * 0.5, h * 0.52, h * 0.1, w * 0.5, h * 0.52, h * 0.72);
+        ctx.globalCompositeOperation = "source-over";
+        ctx.fillStyle = "rgba(5,7,15,0.24)";
+        ctx.fillRect(0, 0, w, h);
+
+        var wash = ctx.createLinearGradient(0, 0, 0, h);
+        wash.addColorStop(0, "rgba(35,18,61,0.30)");
+        wash.addColorStop(0.34, "rgba(8,24,43,0.24)");
+        wash.addColorStop(0.72, "rgba(12,18,41,0.30)");
+        wash.addColorStop(1, "rgba(5,6,14,0.44)");
+        ctx.fillStyle = wash;
+        ctx.fillRect(0, 0, w, h);
+
+        var g = ctx.createRadialGradient(w * 0.5, h * 0.48, h * 0.12, w * 0.5, h * 0.52, h * 0.78);
         g.addColorStop(0, "rgba(0,0,0,0)");
-        g.addColorStop(0.62, "rgba(19,9,34,0.03)");
-        g.addColorStop(1, "rgba(8,5,18,0.32)");
-        ctx.globalCompositeOperation = "multiply";
+        g.addColorStop(0.58, "rgba(13,8,27,0.10)");
+        g.addColorStop(1, "rgba(3,3,10,0.54)");
         ctx.fillStyle = g;
         ctx.fillRect(0, 0, w, h);
 
