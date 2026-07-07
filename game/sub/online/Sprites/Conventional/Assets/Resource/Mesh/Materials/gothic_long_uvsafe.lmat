@@ -2,26 +2,10 @@
   "version": "LAYAMATERIAL:02",
   "props": {
     "type": "Laya.PBRStandardMaterial",
-    "name": "color_gradient",
+    "name": "gothic_long_uvsafe",
     "textures": [
       {
         "name": "albedoTexture",
-        "path": "../gothic_long_uvsafe.png",
-        "constructParams": [
-          512,
-          512,
-          1,
-          true
-        ],
-        "propertyParams": {
-          "filterMode": 1,
-          "wrapModeU": 0,
-          "wrapModeV": 0,
-          "anisoLevel": 1
-        }
-      },
-      {
-        "name": "emissionTexture",
         "path": "../gothic_long_uvsafe.png",
         "constructParams": [
           512,

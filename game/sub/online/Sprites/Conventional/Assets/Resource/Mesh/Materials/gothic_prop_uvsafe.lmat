@@ -25,26 +25,26 @@
       {
         "name": "albedoColor",
         "value": [
-          0.92,
-          0.88,
-          0.82,
+          0.96,
+          0.9,
+          0.84,
           1
         ]
       },
       {
         "name": "emissionColor",
         "value": [
-          0.015,
+          0.014,
+          0.03,
           0.035,
-          0.04,
           1
         ]
       },
       {
         "name": "tilingOffset",
         "value": [
-          1.6,
-          1.6,
+          1.15,
+          1.15,
           0,
           0
         ]
@@ -61,7 +61,7 @@
     "depthTest": 515,
     "renderQueue": 2000,
     "_Cutoff": 0.5,
-    "smoothness": 0.26,
+    "smoothness": 0.24,
     "smoothnessTextureScale": 1,
     "metallic": 0.08,
     "normalTextureScale": 1,

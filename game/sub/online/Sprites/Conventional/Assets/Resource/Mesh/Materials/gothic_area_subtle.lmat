@@ -6,7 +6,7 @@
     "textures": [
       {
         "name": "albedoTexture",
-        "path": "../gothic_floor_api_uvsafe.png",
+        "path": "../gothic_long_uvsafe.png",
         "constructParams": [
           512,
           512,
@@ -25,16 +25,16 @@
       {
         "name": "albedoColor",
         "value": [
-          0.42,
+          0.34,
+          0.46,
           0.52,
-          0.58,
-          0.16
+          0.11
         ]
       },
       {
         "name": "emissionColor",
         "value": [
-          0.004,
+          0.003,
           0.012,
           0.016,
           1
@@ -43,8 +43,8 @@
       {
         "name": "tilingOffset",
         "value": [
-          2.0,
-          2.0,
+          0.75,
+          0.75,
           0,
           0
         ]
