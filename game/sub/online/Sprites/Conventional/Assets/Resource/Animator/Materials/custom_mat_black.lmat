@@ -1,28 +1,45 @@
 {
-	"version":"LAYAMATERIAL:02",
-	"props":{
-		"type":"Laya.UnlitMaterial",
-		"name":"custom_mat_black",
-		"renderStates":[
+	"version": "LAYAMATERIAL:02",
+	"props": {
+		"type": "Laya.UnlitMaterial",
+		"name": "custom_mat_black",
+		"renderStates": [
 			{
-				"cull":2,
-				"blend":0,
-				"srcBlend":1,
-				"dstBlend":0,
-				"depthWrite":true,
-				"depthTest":515
+				"cull": 2,
+				"blend": 0,
+				"srcBlend": 1,
+				"dstBlend": 0,
+				"depthWrite": true,
+				"depthTest": 515
 			}
 		],
-		"enableVertexColor":false,
-		"alphaTest":false,
-		"alphaTestValue":0.5,
-		"renderQueue":2000,
-		"albedoIntensity":1,
-		"textures":[],
-		"vectors":[
+		"enableVertexColor": false,
+		"alphaTest": false,
+		"alphaTestValue": 0.5,
+		"renderQueue": 2000,
+		"albedoIntensity": 1.55,
+		"textures": [
 			{
-				"name":"tilingOffset",
-				"value":[
+				"name": "albedoTexture",
+				"path": "../../Texture/gothic_player_shadowcloth.png",
+				"constructParams": [
+					256,
+					256,
+					1,
+					false
+				],
+				"propertyParams": {
+					"filterMode": 1,
+					"wrapModeU": 0,
+					"wrapModeV": 0,
+					"anisoLevel": 1
+				}
+			}
+		],
+		"vectors": [
+			{
+				"name": "tilingOffset",
+				"value": [
 					1,
 					1,
 					0,
@@ -30,15 +47,15 @@
 				]
 			},
 			{
-				"name":"albedoColor",
-				"value":[
-					0,
-					0,
-					0,
+				"name": "albedoColor",
+				"value": [
+					1,
+					1,
+					1,
 					1
 				]
 			}
 		],
-		"defines":[]
+		"defines": []
 	}
 }
