@@ -31,8 +31,8 @@
             if (target === canvas || target.id === "magic-alley-overlay") {
                 continue;
             }
-            target.style.filter = "hue-rotate(202deg) saturate(0.94) brightness(1.53) contrast(1.02)";
-            target.style.backgroundColor = "#141929";
+            target.style.filter = "hue-rotate(202deg) saturate(1.08) brightness(2.05) contrast(0.92)";
+            target.style.backgroundColor = "#263047";
         }
     }
 
@@ -85,15 +85,15 @@
         var top = h * 0.12;
         var bottom = h * 0.96;
         var band = ctx.createLinearGradient(0, top, 0, bottom);
-        band.addColorStop(0, "rgba(44,58,82,0.05)");
-        band.addColorStop(0.34, "rgba(38,62,82,0.08)");
-        band.addColorStop(1, "rgba(22,28,44,0.10)");
+        band.addColorStop(0, "rgba(74,92,122,0.16)");
+        band.addColorStop(0.34, "rgba(56,92,116,0.20)");
+        band.addColorStop(1, "rgba(36,48,72,0.22)");
         ctx.fillStyle = band;
         ctx.fillRect(0, top, w, bottom - top);
 
         ctx.save();
-        ctx.globalAlpha = 0.26;
-        ctx.strokeStyle = "rgba(154,184,202,0.18)";
+        ctx.globalAlpha = 0.22;
+        ctx.strokeStyle = "rgba(190,218,232,0.16)";
         ctx.lineWidth = Math.max(1, dpr);
         var spacing = 34 * dpr;
         for (var y = top + ((now * 0.003) % spacing); y < bottom + spacing; y += spacing) {
@@ -114,7 +114,7 @@
             ctx.lineTo(x2 + w * 0.32, top);
             ctx.stroke();
         }
-        ctx.strokeStyle = "rgba(87,255,237,0.14)";
+        ctx.strokeStyle = "rgba(96,255,239,0.10)";
         ctx.lineWidth = Math.max(1, 1.2 * dpr);
         for (var i = 0; i < 8; i++) {
             var px = (i * 0.137 + 0.08) % 1 * w;
@@ -140,28 +140,28 @@
         ctx.globalCompositeOperation = "source-over";
         drawStoneFloor(ctx, w, h, dpr, now);
 
-        ctx.fillStyle = "rgba(5,7,15,0.015)";
+        ctx.fillStyle = "rgba(5,7,15,0)";
         ctx.fillRect(0, 0, w, h);
 
         var wash = ctx.createLinearGradient(0, 0, 0, h);
-        wash.addColorStop(0, "rgba(55,35,85,0.07)");
-        wash.addColorStop(0.34, "rgba(10,45,67,0.06)");
-        wash.addColorStop(0.72, "rgba(20,31,58,0.07)");
-        wash.addColorStop(1, "rgba(8,9,20,0.10)");
+        wash.addColorStop(0, "rgba(80,54,118,0.04)");
+        wash.addColorStop(0.34, "rgba(28,82,104,0.04)");
+        wash.addColorStop(0.72, "rgba(34,48,82,0.04)");
+        wash.addColorStop(1, "rgba(16,18,34,0.05)");
         ctx.fillStyle = wash;
         ctx.fillRect(0, 0, w, h);
 
         var g = ctx.createRadialGradient(w * 0.5, h * 0.48, h * 0.12, w * 0.5, h * 0.52, h * 0.78);
         g.addColorStop(0, "rgba(0,0,0,0)");
-        g.addColorStop(0.58, "rgba(13,8,27,0.02)");
-        g.addColorStop(1, "rgba(3,3,10,0.10)");
+        g.addColorStop(0.58, "rgba(13,8,27,0.01)");
+        g.addColorStop(1, "rgba(3,3,10,0.04)");
         ctx.fillStyle = g;
         ctx.fillRect(0, 0, w, h);
 
         ctx.globalCompositeOperation = "screen";
         var centerLight = ctx.createRadialGradient(w * 0.5, h * 0.44, 0, w * 0.5, h * 0.48, h * 0.46);
-        centerLight.addColorStop(0, "rgba(102,225,228,0.22)");
-        centerLight.addColorStop(0.35, "rgba(90,120,190,0.13)");
+        centerLight.addColorStop(0, "rgba(128,238,235,0.34)");
+        centerLight.addColorStop(0.35, "rgba(110,146,210,0.18)");
         centerLight.addColorStop(1, "rgba(0,0,0,0)");
         ctx.fillStyle = centerLight;
         ctx.fillRect(0, 0, w, h);
