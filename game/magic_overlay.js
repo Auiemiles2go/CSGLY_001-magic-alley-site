@@ -31,8 +31,8 @@
             if (target === canvas || target.id === "magic-alley-overlay") {
                 continue;
             }
-            target.style.filter = "hue-rotate(210deg) saturate(0.54) brightness(0.60) contrast(1.30)";
-            target.style.backgroundColor = "#090b14";
+            target.style.filter = "hue-rotate(202deg) saturate(0.90) brightness(1.02) contrast(1.06)";
+            target.style.backgroundColor = "#141929";
         }
     }
 
@@ -85,15 +85,15 @@
         var top = h * 0.12;
         var bottom = h * 0.96;
         var band = ctx.createLinearGradient(0, top, 0, bottom);
-        band.addColorStop(0, "rgba(15,18,29,0.10)");
-        band.addColorStop(0.34, "rgba(18,22,34,0.26)");
-        band.addColorStop(1, "rgba(8,9,17,0.50)");
+        band.addColorStop(0, "rgba(34,44,66,0.07)");
+        band.addColorStop(0.34, "rgba(30,50,68,0.11)");
+        band.addColorStop(1, "rgba(18,22,36,0.16)");
         ctx.fillStyle = band;
         ctx.fillRect(0, top, w, bottom - top);
 
         ctx.save();
-        ctx.globalAlpha = 0.34;
-        ctx.strokeStyle = "rgba(145,165,185,0.22)";
+        ctx.globalAlpha = 0.26;
+        ctx.strokeStyle = "rgba(154,184,202,0.18)";
         ctx.lineWidth = Math.max(1, dpr);
         var spacing = 34 * dpr;
         for (var y = top + ((now * 0.003) % spacing); y < bottom + spacing; y += spacing) {
@@ -114,7 +114,7 @@
             ctx.lineTo(x2 + w * 0.32, top);
             ctx.stroke();
         }
-        ctx.strokeStyle = "rgba(87,255,237,0.18)";
+        ctx.strokeStyle = "rgba(87,255,237,0.14)";
         ctx.lineWidth = Math.max(1, 1.2 * dpr);
         for (var i = 0; i < 8; i++) {
             var px = (i * 0.137 + 0.08) % 1 * w;
@@ -140,25 +140,32 @@
         ctx.globalCompositeOperation = "source-over";
         drawStoneFloor(ctx, w, h, dpr, now);
 
-        ctx.fillStyle = "rgba(5,7,15,0.30)";
+        ctx.fillStyle = "rgba(5,7,15,0.04)";
         ctx.fillRect(0, 0, w, h);
 
         var wash = ctx.createLinearGradient(0, 0, 0, h);
-        wash.addColorStop(0, "rgba(35,18,61,0.36)");
-        wash.addColorStop(0.34, "rgba(8,24,43,0.30)");
-        wash.addColorStop(0.72, "rgba(12,18,41,0.36)");
-        wash.addColorStop(1, "rgba(5,6,14,0.52)");
+        wash.addColorStop(0, "rgba(55,35,85,0.11)");
+        wash.addColorStop(0.34, "rgba(10,45,67,0.09)");
+        wash.addColorStop(0.72, "rgba(20,31,58,0.11)");
+        wash.addColorStop(1, "rgba(8,9,20,0.16)");
         ctx.fillStyle = wash;
         ctx.fillRect(0, 0, w, h);
 
         var g = ctx.createRadialGradient(w * 0.5, h * 0.48, h * 0.12, w * 0.5, h * 0.52, h * 0.78);
         g.addColorStop(0, "rgba(0,0,0,0)");
-        g.addColorStop(0.58, "rgba(13,8,27,0.16)");
-        g.addColorStop(1, "rgba(3,3,10,0.62)");
+        g.addColorStop(0.58, "rgba(13,8,27,0.03)");
+        g.addColorStop(1, "rgba(3,3,10,0.18)");
         ctx.fillStyle = g;
         ctx.fillRect(0, 0, w, h);
 
         ctx.globalCompositeOperation = "screen";
+        var centerLight = ctx.createRadialGradient(w * 0.5, h * 0.44, 0, w * 0.5, h * 0.48, h * 0.46);
+        centerLight.addColorStop(0, "rgba(92,205,214,0.18)");
+        centerLight.addColorStop(0.35, "rgba(82,95,180,0.10)");
+        centerLight.addColorStop(1, "rgba(0,0,0,0)");
+        ctx.fillStyle = centerLight;
+        ctx.fillRect(0, 0, w, h);
+
         for (var i = 0; i < motes.length; i++) {
             var m = motes[i];
             var yy = ((m.y * h) - (now * m.s * 0.018 * dpr)) % h;
@@ -169,8 +176,8 @@
             var x = m.x * w + Math.sin(now * 0.0011 + m.p) * 18 * dpr;
             var r = m.r * dpr * (1 + pulse * 0.45);
             var mg = ctx.createRadialGradient(x, yy, 0, x, yy, r * 5);
-            mg.addColorStop(0, "rgba(113,255,242," + (0.32 + pulse * 0.25).toFixed(3) + ")");
-            mg.addColorStop(0.38, "rgba(160,95,255," + (0.11 + pulse * 0.08).toFixed(3) + ")");
+            mg.addColorStop(0, "rgba(113,255,242," + (0.22 + pulse * 0.18).toFixed(3) + ")");
+            mg.addColorStop(0.38, "rgba(160,95,255," + (0.08 + pulse * 0.06).toFixed(3) + ")");
             mg.addColorStop(1, "rgba(0,0,0,0)");
             ctx.fillStyle = mg;
             ctx.beginPath();
@@ -181,13 +188,13 @@
         var sweep = ((now * 0.00006) % 1.2) - 0.1;
         var lg = ctx.createLinearGradient(w * (sweep - 0.16), 0, w * (sweep + 0.16), h);
         lg.addColorStop(0, "rgba(0,0,0,0)");
-        lg.addColorStop(0.5, "rgba(94,255,241,0.065)");
+        lg.addColorStop(0.5, "rgba(94,255,241,0.045)");
         lg.addColorStop(1, "rgba(0,0,0,0)");
         ctx.fillStyle = lg;
         ctx.fillRect(0, 0, w, h);
 
-        rune(ctx, w * 0.14, h * 0.23, Math.min(w, h) * 0.052, 0.18);
-        rune(ctx, w * 0.86, h * 0.79, Math.min(w, h) * 0.045, 0.14);
+        rune(ctx, w * 0.14, h * 0.23, Math.min(w, h) * 0.052, 0.12);
+        rune(ctx, w * 0.86, h * 0.79, Math.min(w, h) * 0.045, 0.10);
 
         requestAnimationFrame(draw);
     }
