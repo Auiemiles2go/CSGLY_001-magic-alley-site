@@ -31,7 +31,7 @@
             if (target === canvas || target.id === "magic-alley-overlay") {
                 continue;
             }
-            target.style.filter = "saturate(1.04) brightness(1.28) contrast(0.98)";
+            target.style.filter = "saturate(1.02) brightness(1.10) contrast(1.08)";
             target.style.backgroundColor = "#20283a";
         }
     }
@@ -85,9 +85,9 @@
         var top = h * 0.12;
         var bottom = h * 0.96;
         var band = ctx.createLinearGradient(0, top, 0, bottom);
-        band.addColorStop(0, "rgba(74,92,122,0.16)");
-        band.addColorStop(0.34, "rgba(56,92,116,0.20)");
-        band.addColorStop(1, "rgba(36,48,72,0.22)");
+        band.addColorStop(0, "rgba(40,48,62,0.06)");
+        band.addColorStop(0.34, "rgba(38,56,68,0.06)");
+        band.addColorStop(1, "rgba(24,30,42,0.08)");
         ctx.fillStyle = band;
         ctx.fillRect(0, top, w, bottom - top);
 
@@ -160,8 +160,8 @@
 
         ctx.globalCompositeOperation = "screen";
         var centerLight = ctx.createRadialGradient(w * 0.5, h * 0.44, 0, w * 0.5, h * 0.48, h * 0.46);
-        centerLight.addColorStop(0, "rgba(120,220,235,0.18)");
-        centerLight.addColorStop(0.35, "rgba(90,128,205,0.10)");
+        centerLight.addColorStop(0, "rgba(120,220,235,0.06)");
+        centerLight.addColorStop(0.35, "rgba(90,128,205,0.035)");
         centerLight.addColorStop(1, "rgba(0,0,0,0)");
         ctx.fillStyle = centerLight;
         ctx.fillRect(0, 0, w, h);
