@@ -6,7 +6,7 @@
     "textures": [
       {
         "name": "albedoTexture",
-        "path": "../color_gradient.png",
+        "path": "../gothic_stone_floor.png",
         "constructParams": [
           512,
           512,
@@ -25,18 +25,18 @@
       {
         "name": "albedoColor",
         "value": [
-          0.42,
-          0.52,
-          0.72,
+          0.78,
+          0.88,
+          1.0,
           1
         ]
       },
       {
         "name": "emissionColor",
         "value": [
-          0.025,
-          0.06,
-          0.095,
+          0.045,
+          0.1,
+          0.15,
           1
         ]
       },
@@ -61,7 +61,7 @@
     "depthTest": 515,
     "renderQueue": 2000,
     "_Cutoff": 0.5,
-    "smoothness": 0.18,
+    "smoothness": 0.2,
     "smoothnessTextureScale": 1,
     "metallic": 0,
     "normalTextureScale": 1,

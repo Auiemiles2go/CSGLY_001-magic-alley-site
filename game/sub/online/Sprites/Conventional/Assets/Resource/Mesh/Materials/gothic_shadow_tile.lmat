@@ -6,7 +6,7 @@
     "textures": [
       {
         "name": "albedoTexture",
-        "path": "../color_gradient.png",
+        "path": "../gothic_shadow_rune.png",
         "constructParams": [
           512,
           512,
@@ -25,18 +25,18 @@
       {
         "name": "albedoColor",
         "value": [
-          0.38,
-          0.46,
-          0.72,
-          0.68
+          0.7,
+          0.84,
+          1.0,
+          0.72
         ]
       },
       {
         "name": "emissionColor",
         "value": [
-          0.05,
-          0.09,
-          0.17,
+          0.075,
+          0.16,
+          0.25,
           1
         ]
       },
@@ -62,7 +62,7 @@
     "depthTest": 515,
     "renderQueue": 3000,
     "_Cutoff": 0.5,
-    "smoothness": 0.12,
+    "smoothness": 0.14,
     "smoothnessTextureScale": 1,
     "metallic": 0,
     "normalTextureScale": 1,
