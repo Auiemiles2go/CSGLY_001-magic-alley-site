@@ -25,18 +25,18 @@
       {
         "name": "albedoColor",
         "value": [
-          0.16,
-          0.14,
-          0.22,
+          0.42,
+          0.52,
+          0.72,
           1
         ]
       },
       {
         "name": "emissionColor",
         "value": [
-          0.03,
-          0.045,
-          0.075,
+          0.025,
+          0.06,
+          0.095,
           1
         ]
       },
@@ -50,7 +50,9 @@
         ]
       }
     ],
-    "defines": [],
+    "defines": [
+      "EMISSION"
+    ],
     "cull": 2,
     "blendSrc": 1,
     "blendDst": 0,
