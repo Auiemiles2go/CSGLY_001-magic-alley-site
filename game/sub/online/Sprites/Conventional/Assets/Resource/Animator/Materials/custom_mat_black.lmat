@@ -56,6 +56,10 @@
 				]
 			}
 		],
-		"defines": []
+		"defines": [
+			"EMISSION"
+		],
+		"smoothness": 0.16,
+		"metallic": 0.02
 	}
 }
