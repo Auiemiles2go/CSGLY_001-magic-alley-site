@@ -31,7 +31,7 @@
             if (target === canvas || target.id === "magic-alley-overlay") {
                 continue;
             }
-            target.style.filter = "hue-rotate(202deg) saturate(0.90) brightness(1.02) contrast(1.06)";
+            target.style.filter = "hue-rotate(202deg) saturate(0.94) brightness(1.53) contrast(1.02)";
             target.style.backgroundColor = "#141929";
         }
     }
@@ -85,9 +85,9 @@
         var top = h * 0.12;
         var bottom = h * 0.96;
         var band = ctx.createLinearGradient(0, top, 0, bottom);
-        band.addColorStop(0, "rgba(34,44,66,0.07)");
-        band.addColorStop(0.34, "rgba(30,50,68,0.11)");
-        band.addColorStop(1, "rgba(18,22,36,0.16)");
+        band.addColorStop(0, "rgba(44,58,82,0.05)");
+        band.addColorStop(0.34, "rgba(38,62,82,0.08)");
+        band.addColorStop(1, "rgba(22,28,44,0.10)");
         ctx.fillStyle = band;
         ctx.fillRect(0, top, w, bottom - top);
 
@@ -140,28 +140,28 @@
         ctx.globalCompositeOperation = "source-over";
         drawStoneFloor(ctx, w, h, dpr, now);
 
-        ctx.fillStyle = "rgba(5,7,15,0.04)";
+        ctx.fillStyle = "rgba(5,7,15,0.015)";
         ctx.fillRect(0, 0, w, h);
 
         var wash = ctx.createLinearGradient(0, 0, 0, h);
-        wash.addColorStop(0, "rgba(55,35,85,0.11)");
-        wash.addColorStop(0.34, "rgba(10,45,67,0.09)");
-        wash.addColorStop(0.72, "rgba(20,31,58,0.11)");
-        wash.addColorStop(1, "rgba(8,9,20,0.16)");
+        wash.addColorStop(0, "rgba(55,35,85,0.07)");
+        wash.addColorStop(0.34, "rgba(10,45,67,0.06)");
+        wash.addColorStop(0.72, "rgba(20,31,58,0.07)");
+        wash.addColorStop(1, "rgba(8,9,20,0.10)");
         ctx.fillStyle = wash;
         ctx.fillRect(0, 0, w, h);
 
         var g = ctx.createRadialGradient(w * 0.5, h * 0.48, h * 0.12, w * 0.5, h * 0.52, h * 0.78);
         g.addColorStop(0, "rgba(0,0,0,0)");
-        g.addColorStop(0.58, "rgba(13,8,27,0.03)");
-        g.addColorStop(1, "rgba(3,3,10,0.18)");
+        g.addColorStop(0.58, "rgba(13,8,27,0.02)");
+        g.addColorStop(1, "rgba(3,3,10,0.10)");
         ctx.fillStyle = g;
         ctx.fillRect(0, 0, w, h);
 
         ctx.globalCompositeOperation = "screen";
         var centerLight = ctx.createRadialGradient(w * 0.5, h * 0.44, 0, w * 0.5, h * 0.48, h * 0.46);
-        centerLight.addColorStop(0, "rgba(92,205,214,0.18)");
-        centerLight.addColorStop(0.35, "rgba(82,95,180,0.10)");
+        centerLight.addColorStop(0, "rgba(102,225,228,0.22)");
+        centerLight.addColorStop(0.35, "rgba(90,120,190,0.13)");
         centerLight.addColorStop(1, "rgba(0,0,0,0)");
         ctx.fillStyle = centerLight;
         ctx.fillRect(0, 0, w, h);
