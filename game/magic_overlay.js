@@ -31,7 +31,7 @@
             if (target === canvas || target.id === "magic-alley-overlay") {
                 continue;
             }
-            target.style.filter = "saturate(1.02) brightness(1.10) contrast(1.08)";
+            target.style.filter = "saturate(1.03) brightness(1.04) contrast(1.10)";
             target.style.backgroundColor = "#20283a";
         }
     }
@@ -80,52 +80,6 @@
         ctx.stroke();
         ctx.restore();
     }
-
-    function drawStoneFloor(ctx, w, h, dpr, now) {
-        var top = h * 0.12;
-        var bottom = h * 0.96;
-        var band = ctx.createLinearGradient(0, top, 0, bottom);
-        band.addColorStop(0, "rgba(40,48,62,0.06)");
-        band.addColorStop(0.34, "rgba(38,56,68,0.06)");
-        band.addColorStop(1, "rgba(24,30,42,0.08)");
-        ctx.fillStyle = band;
-        ctx.fillRect(0, top, w, bottom - top);
-
-        ctx.save();
-        ctx.globalAlpha = 0.22;
-        ctx.strokeStyle = "rgba(190,218,232,0.16)";
-        ctx.lineWidth = Math.max(1, dpr);
-        var spacing = 34 * dpr;
-        for (var y = top + ((now * 0.003) % spacing); y < bottom + spacing; y += spacing) {
-            ctx.beginPath();
-            ctx.moveTo(0, y);
-            ctx.lineTo(w, y + Math.sin(y * 0.01) * 10 * dpr);
-            ctx.stroke();
-        }
-        for (var x = -w; x < w * 1.7; x += spacing * 1.35) {
-            ctx.beginPath();
-            ctx.moveTo(x, top);
-            ctx.lineTo(x + w * 0.42, bottom);
-            ctx.stroke();
-        }
-        for (var x2 = -w * 0.4; x2 < w * 1.9; x2 += spacing * 1.55) {
-            ctx.beginPath();
-            ctx.moveTo(x2, bottom);
-            ctx.lineTo(x2 + w * 0.32, top);
-            ctx.stroke();
-        }
-        ctx.strokeStyle = "rgba(96,255,239,0.10)";
-        ctx.lineWidth = Math.max(1, 1.2 * dpr);
-        for (var i = 0; i < 8; i++) {
-            var px = (i * 0.137 + 0.08) % 1 * w;
-            var py = top + ((i * 0.211 + 0.16) % 1) * (bottom - top);
-            ctx.beginPath();
-            ctx.arc(px, py, (5 + (i % 3) * 2) * dpr, 0, Math.PI * 2);
-            ctx.stroke();
-        }
-        ctx.restore();
-    }
-
     function draw(now) {
         attach();
         gradeGameCanvas();
@@ -138,16 +92,15 @@
         ctx.clearRect(0, 0, w, h);
 
         ctx.globalCompositeOperation = "source-over";
-        drawStoneFloor(ctx, w, h, dpr, now);
 
         ctx.fillStyle = "rgba(5,7,15,0)";
         ctx.fillRect(0, 0, w, h);
 
         var wash = ctx.createLinearGradient(0, 0, 0, h);
-        wash.addColorStop(0, "rgba(46,58,102,0.025)");
-        wash.addColorStop(0.34, "rgba(24,68,98,0.028)");
-        wash.addColorStop(0.72, "rgba(28,42,78,0.028)");
-        wash.addColorStop(1, "rgba(14,16,30,0.035)");
+        wash.addColorStop(0, "rgba(46,58,102,0.006)");
+        wash.addColorStop(0.34, "rgba(24,68,98,0.006)");
+        wash.addColorStop(0.72, "rgba(28,42,78,0.006)");
+        wash.addColorStop(1, "rgba(14,16,30,0.010)");
         ctx.fillStyle = wash;
         ctx.fillRect(0, 0, w, h);
 
@@ -160,8 +113,8 @@
 
         ctx.globalCompositeOperation = "screen";
         var centerLight = ctx.createRadialGradient(w * 0.5, h * 0.44, 0, w * 0.5, h * 0.48, h * 0.46);
-        centerLight.addColorStop(0, "rgba(120,220,235,0.06)");
-        centerLight.addColorStop(0.35, "rgba(90,128,205,0.035)");
+        centerLight.addColorStop(0, "rgba(120,220,235,0.018)");
+        centerLight.addColorStop(0.35, "rgba(90,128,205,0.012)");
         centerLight.addColorStop(1, "rgba(0,0,0,0)");
         ctx.fillStyle = centerLight;
         ctx.fillRect(0, 0, w, h);

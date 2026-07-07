@@ -1,0 +1,72 @@
+{
+  "version": "LAYAMATERIAL:02",
+  "props": {
+    "type": "Laya.PBRStandardMaterial",
+    "name": "gothic_glass_uvsafe",
+    "textures": [
+      {
+        "name": "albedoTexture",
+        "path": "../gothic_glass_uvsafe.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      }
+    ],
+    "vectors": [
+      {
+        "name": "albedoColor",
+        "value": [
+          0.72,
+          0.88,
+          0.95,
+          0.86
+        ]
+      },
+      {
+        "name": "emissionColor",
+        "value": [
+          0.025,
+          0.08,
+          0.1,
+          1
+        ]
+      },
+      {
+        "name": "tilingOffset",
+        "value": [
+          1.2,
+          1.2,
+          0,
+          0
+        ]
+      }
+    ],
+    "defines": [
+      "TRANSPARENTBLEND",
+      "EMISSION"
+    ],
+    "cull": 2,
+    "blendSrc": 1,
+    "blendDst": 771,
+    "blend": 1,
+    "depthWrite": false,
+    "depthTest": 515,
+    "renderQueue": 3000,
+    "_Cutoff": 0.5,
+    "smoothness": 0.42,
+    "smoothnessTextureScale": 1,
+    "metallic": 0.0,
+    "normalTextureScale": 1,
+    "parallaxTextureScale": 0.02,
+    "occlusionTextureStrength": 1
+  }
+}
