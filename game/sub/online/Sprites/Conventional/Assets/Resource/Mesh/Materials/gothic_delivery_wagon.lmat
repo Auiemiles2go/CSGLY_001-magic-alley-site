@@ -1,0 +1,87 @@
+{
+  "version": "LAYAMATERIAL:02",
+  "props": {
+    "type": "Laya.PBRStandardMaterial",
+    "name": "gothic_delivery_wagon",
+    "textures": [
+      {
+        "name": "albedoTexture",
+        "path": "../gothic_delivery_wagon.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      },
+      {
+        "name": "emissionTexture",
+        "path": "../gothic_delivery_wagon.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      }
+    ],
+    "vectors": [
+      {
+        "name": "albedoColor",
+        "value": [
+          1.18,
+          1.15,
+          1.05,
+          1
+        ]
+      },
+      {
+        "name": "emissionColor",
+        "value": [
+          0.02,
+          0.07,
+          0.08,
+          1
+        ]
+      },
+      {
+        "name": "tilingOffset",
+        "value": [
+          0.86,
+          0.86,
+          0,
+          0
+        ]
+      }
+    ],
+    "defines": [
+      "EMISSION"
+    ],
+    "cull": 2,
+    "blendSrc": 1,
+    "blendDst": 0,
+    "blend": 0,
+    "depthWrite": true,
+    "depthTest": 515,
+    "renderQueue": 2000,
+    "_Cutoff": 0.5,
+    "smoothness": 0.24,
+    "smoothnessTextureScale": 1,
+    "metallic": 0.12,
+    "normalTextureScale": 1,
+    "parallaxTextureScale": 0.02,
+    "occlusionTextureStrength": 1
+  }
+}

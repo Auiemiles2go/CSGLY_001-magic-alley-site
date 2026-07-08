@@ -41,18 +41,18 @@
       {
         "name": "albedoColor",
         "value": [
-          1.22,
-          1.18,
-          1.08,
+          0.98,
+          1.02,
+          1.04,
           1
         ]
       },
       {
         "name": "emissionColor",
         "value": [
-          0.018,
-          0.055,
-          0.065,
+          0.01,
+          0.04,
+          0.045,
           1
         ]
       },
@@ -77,9 +77,9 @@
     "depthTest": 515,
     "renderQueue": 2000,
     "_Cutoff": 0.5,
-    "smoothness": 0.14,
+    "smoothness": 0.15,
     "smoothnessTextureScale": 1,
-    "metallic": 0.0,
+    "metallic": 0.02,
     "normalTextureScale": 1,
     "parallaxTextureScale": 0.02,
     "occlusionTextureStrength": 1

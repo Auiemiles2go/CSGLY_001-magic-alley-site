@@ -1,0 +1,87 @@
+{
+  "version": "LAYAMATERIAL:02",
+  "props": {
+    "type": "Laya.PBRStandardMaterial",
+    "name": "gothic_crate_packaging",
+    "textures": [
+      {
+        "name": "albedoTexture",
+        "path": "../gothic_crate_packaging.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      },
+      {
+        "name": "emissionTexture",
+        "path": "../gothic_crate_packaging.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      }
+    ],
+    "vectors": [
+      {
+        "name": "albedoColor",
+        "value": [
+          1.14,
+          1.06,
+          0.94,
+          1
+        ]
+      },
+      {
+        "name": "emissionColor",
+        "value": [
+          0.018,
+          0.055,
+          0.055,
+          1
+        ]
+      },
+      {
+        "name": "tilingOffset",
+        "value": [
+          0.92,
+          0.92,
+          0,
+          0
+        ]
+      }
+    ],
+    "defines": [
+      "EMISSION"
+    ],
+    "cull": 2,
+    "blendSrc": 1,
+    "blendDst": 0,
+    "blend": 0,
+    "depthWrite": true,
+    "depthTest": 515,
+    "renderQueue": 2000,
+    "_Cutoff": 0.5,
+    "smoothness": 0.18,
+    "smoothnessTextureScale": 1,
+    "metallic": 0.04,
+    "normalTextureScale": 1,
+    "parallaxTextureScale": 0.02,
+    "occlusionTextureStrength": 1
+  }
+}
