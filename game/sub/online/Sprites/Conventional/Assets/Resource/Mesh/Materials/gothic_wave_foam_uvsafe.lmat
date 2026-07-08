@@ -1,0 +1,88 @@
+{
+  "version": "LAYAMATERIAL:02",
+  "props": {
+    "type": "Laya.PBRStandardMaterial",
+    "name": "gothic_wave_foam_uvsafe",
+    "textures": [
+      {
+        "name": "albedoTexture",
+        "path": "../gothic_wave_foam_uvsafe.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      },
+      {
+        "name": "emissionTexture",
+        "path": "../gothic_wave_foam_uvsafe.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      }
+    ],
+    "vectors": [
+      {
+        "name": "albedoColor",
+        "value": [
+          0.36,
+          0.58,
+          0.66,
+          0.22
+        ]
+      },
+      {
+        "name": "emissionColor",
+        "value": [
+          0.004,
+          0.03,
+          0.04,
+          1
+        ]
+      },
+      {
+        "name": "tilingOffset",
+        "value": [
+          5.2,
+          5.2,
+          0,
+          0
+        ]
+      }
+    ],
+    "defines": [
+      "TRANSPARENTBLEND",
+      "EMISSION"
+    ],
+    "cull": 2,
+    "blendSrc": 1,
+    "blendDst": 771,
+    "blend": 1,
+    "depthWrite": false,
+    "depthTest": 515,
+    "renderQueue": 2990,
+    "_Cutoff": 0.5,
+    "smoothness": 0.72,
+    "smoothnessTextureScale": 1,
+    "metallic": 0,
+    "normalTextureScale": 1,
+    "parallaxTextureScale": 0.02,
+    "occlusionTextureStrength": 1
+  }
+}
