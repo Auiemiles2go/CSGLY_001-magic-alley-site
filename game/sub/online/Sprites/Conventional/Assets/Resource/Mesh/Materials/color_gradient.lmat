@@ -6,7 +6,7 @@
     "textures": [
       {
         "name": "albedoTexture",
-        "path": "../gothic_long_uvsafe.png",
+        "path": "../gothic_platform_visible.png",
         "constructParams": [
           512,
           512,
@@ -22,7 +22,7 @@
       },
       {
         "name": "emissionTexture",
-        "path": "../gothic_long_uvsafe.png",
+        "path": "../gothic_platform_visible.png",
         "constructParams": [
           512,
           512,
@@ -41,26 +41,26 @@
       {
         "name": "albedoColor",
         "value": [
-          1.1,
-          1.1,
-          1.04,
+          1.2,
+          1.18,
+          1.08,
           1
         ]
       },
       {
         "name": "emissionColor",
         "value": [
-          0.01,
-          0.026,
-          0.03,
+          0.018,
+          0.055,
+          0.065,
           1
         ]
       },
       {
         "name": "tilingOffset",
         "value": [
-          0.85,
-          0.85,
+          0.78,
+          0.78,
           0,
           0
         ]
@@ -77,7 +77,7 @@
     "depthTest": 515,
     "renderQueue": 2000,
     "_Cutoff": 0.5,
-    "smoothness": 0.1,
+    "smoothness": 0.12,
     "smoothnessTextureScale": 1,
     "metallic": 0.0,
     "normalTextureScale": 1,
