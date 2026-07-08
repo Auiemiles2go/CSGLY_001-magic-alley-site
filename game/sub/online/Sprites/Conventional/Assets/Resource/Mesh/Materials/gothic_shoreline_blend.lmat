@@ -1,0 +1,61 @@
+{
+  "version": "LAYAMATERIAL:02",
+  "props": {
+    "type": "Laya.UnlitMaterial",
+    "name": "gothic_shoreline_blend",
+    "renderStates": [
+      {
+        "cull": 2,
+        "blend": 1,
+        "srcBlend": 770,
+        "dstBlend": 771,
+        "depthWrite": false,
+        "depthTest": 515
+      }
+    ],
+    "enableVertexColor": false,
+    "alphaTest": false,
+    "alphaTestValue": 0.01,
+    "renderQueue": 3010,
+    "albedoIntensity": 1.08,
+    "textures": [
+      {
+        "name": "albedoTexture",
+        "path": "../gothic_shoreline_blend.png",
+        "constructParams": [
+          512,
+          512,
+          1,
+          true
+        ],
+        "propertyParams": {
+          "filterMode": 1,
+          "wrapModeU": 0,
+          "wrapModeV": 0,
+          "anisoLevel": 1
+        }
+      }
+    ],
+    "vectors": [
+      {
+        "name": "tilingOffset",
+        "value": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "albedoColor",
+        "value": [
+          0.94,
+          1.04,
+          1.05,
+          0.72
+        ]
+      }
+    ],
+    "defines": []
+  }
+}
